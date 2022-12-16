@@ -1,3 +1,9 @@
+interface IIcon {
+  size?: string
+  className?: string
+  fill?: string
+}
+
 export const Github = () => (
   <svg width="22" height="78" viewBox="0 0 22 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
     <rect y="52" width="52" height="22" transform="rotate(-90 0 52)" fill="url(#pattern0)" />
@@ -15,6 +21,18 @@ export const Github = () => (
   </svg>
 )
 
+export const Menu = ({ fill = "#1C1B1F", size = "24" }: IIcon) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0_114_12" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+      <rect width="24" height="24" fill="#D9D9D9" />
+    </mask>
+    <g mask="url(#mask0_114_12)">
+      <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill={fill} />
+    </g>
+  </svg>
+
+)
 export default {
-  Github
+  Github,
+  Menu
 }

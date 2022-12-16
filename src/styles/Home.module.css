@@ -1,11 +1,23 @@
 .container {
   background-color: var(--background);
   height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .heroContainer {
+  display: grid;
+  height: 100vh;
+}
+
+.bannerContainer {
   max-width: min-content;
   position: relative;
+  padding-left: 16px;
+  margin-top: 153px;
+  margin-bottom: auto;
 }
 
 .title {
@@ -23,11 +35,11 @@
 }
 
 .image {
-  position: fixed;
-  bottom: -10px;
-  min-width: 100%;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: end;
   animation: opacity 2s;
+  margin-top: 40px;
 }
 
 .github {
