@@ -3,14 +3,23 @@
   height: 100vh;
 }
 
+.heroContainer {
+  max-width: min-content;
+  position: relative;
+}
+
 .title {
   font-size: 72px;
   font-weight: bold;
+  display: inline;
+  animation: opacity 1s;
 }
 
 .subTitle {
   letter-spacing: 3px;
   font-weight: lighter;
+  display: inline;
+  animation: opacity 1s;
 }
 
 .image {
@@ -18,14 +27,64 @@
   bottom: -10px;
   min-width: 100%;
   text-align: center;
+  animation: opacity 2s;
 }
 
 .github {
   position: fixed;
   right: 0;
   top: calc(50% - 107px);
+  animation: slideIn 2s cubic-bezier(0.65, 0, 0.18, 1.02);
 }
 
+.blocker {
+  background-color: black;
+  width: 0px;
+  animation: slide 1.5s cubic-bezier(0.82, -0.01, 0.13, 1.01);
+  height: 100%;
+  position: absolute;
+  right: 0;
+}
+
+@keyframes slide {
+  0% {
+    width: 0;
+    left: 0;
+  }
+
+  50% {
+    width: 100%;
+    right: 0;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+
+  /* 100% {
+    transform: translateX(-100%);
+  } */
+}
 /* .link {
   transition: all 500ms;
 } */
