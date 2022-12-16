@@ -24,20 +24,20 @@
   font-size: 72px;
   font-weight: bold;
   display: inline;
-  animation: opacity 1s;
+  animation: opacity 1.5s;
 }
 
 .subTitle {
   letter-spacing: 3px;
   font-weight: lighter;
   display: inline;
-  animation: opacity 1s;
+  animation: opacity 1.5s;
 }
 
 .image {
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: flex-end;
   animation: opacity 2s;
   margin-top: 40px;
 }
@@ -83,7 +83,7 @@
     opacity: 0;
   }
 
-  100% {
+  75% {
     opacity: 1;
   }
 }
