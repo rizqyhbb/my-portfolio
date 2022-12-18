@@ -23,16 +23,28 @@ export const Github = () => (
 
 export const Menu = ({ fill = "#1C1B1F", size = "24" }: IIcon) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <mask id="mask0_114_12" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-      <rect width="24" height="24" fill="#D9D9D9" />
+    <mask id="mask0_114_12" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width={size} height={size}>
+      <rect width={size} height={size} fill="#D9D9D9" />
     </mask>
     <g mask="url(#mask0_114_12)">
       <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill={fill} />
     </g>
   </svg>
+)
+
+export const Close = ({ fill = "#1C1B1F", size = "24" }: IIcon) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0_115_237" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width={size} height={size}>
+      <rect width={size} height={size} fill={fill} />
+    </mask>
+    <g mask="url(#mask0_115_237)">
+      <path d="M6.4 19L5 17.6L10.6 12L5 6.4L6.4 5L12 10.6L17.6 5L19 6.4L13.4 12L19 17.6L17.6 19L12 13.4L6.4 19Z" fill="white" />
+    </g>
+  </svg>
 
 )
 export default {
+  Close,
   Github,
   Menu
 }
