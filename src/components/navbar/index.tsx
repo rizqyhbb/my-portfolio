@@ -27,10 +27,22 @@ const Navbar = () => {
             </button>
           </div>
           <div className={styles.containerLink}>
-            <Link className={styles.link} href="/home">home</Link>
-            <Link className={styles.link} href="/work">work</Link>
-            <Link className={styles.link} href="/about">about</Link>
-            <Link className={styles.link} href="/contact">contact</Link>
+            <div className={styles.linkWrapper}>
+              <Link className={styles.link} href="/home">home</Link>
+              <div className={styles.blocker} />
+            </div>
+            <div className={styles.linkWrapper}>
+              <Link className={styles.link} href="/work">work</Link>
+              <div className={styles.blocker} />
+            </div>
+            <div className={styles.linkWrapper}>
+              <Link className={styles.link} href="/about">about</Link>
+              <div className={styles.blocker} />
+            </div>
+            <div className={styles.linkWrapper}>
+              <Link className={styles.link} href="/contact">contact</Link>
+              <div className={styles.blocker} />
+            </div>
           </div>
           <div className={styles.footer}>
             <p>rizqyhbb@gmail.com</p>
