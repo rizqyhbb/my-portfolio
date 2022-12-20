@@ -22,7 +22,7 @@ const Home: NextPageWithLayout = () => {
           <p className={styles.subTitle}>FRONTEND WEB DEVELOPER</p>
         </div>
         <div className={styles.image}>
-          <Image alt='character' src="/char.png" width={281} height={410} />
+          <Image alt='character' src="/char.png" width={240} height={350} quality={100} />
         </div>
       </div>
       <div className={styles.github}>
