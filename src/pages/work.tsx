@@ -4,7 +4,11 @@ import { NextPageWithLayout } from './_app'
 
 const Work: NextPageWithLayout = () => {
   return (
-    <div>work</div>
+    <div>
+      <div>
+        <h1>Work.</h1>
+      </div>
+    </div>
   )
 }
 
