@@ -2,18 +2,28 @@
   position: absolute;
   width: 100%;
 }
+
+.containerDark {
+  color: white;
+}
+
 .titleContainer {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 36px 16px;
-  animation: opacity 2s;
+  animation: fadein 2s;
+  color: inherit;
 }
 
 .button {
   border: none;
   background-color: transparent;
+  color: inherit;
+}
+
+.icon {
 }
 
 .title {
@@ -30,7 +40,7 @@
   border-color: inherit;
   right: 0;
   width: calc(100% - 32px);
-  animation: slide 2s cubic-bezier(0.65, 0, 0.18, 1.02);
+  animation: slidein 2s cubic-bezier(0.65, 0, 0.18, 1.02);
 }
 
 .menu {
@@ -40,7 +50,7 @@
   z-index: 2;
   background-color: var(--black);
   color: white;
-  animation: slide 1s cubic-bezier(0.65, 0, 0.18, 1.02);
+  animation: slidein 1s cubic-bezier(0.65, 0, 0.18, 1.02);
 }
 
 .containerLink {
@@ -82,7 +92,7 @@
   top: 0;
   transform: translateX(100%);
 }
-.close {
+.closeButton {
   padding: 36px 16px;
   text-align: right;
   animation: fadein 2000ms;
@@ -107,19 +117,41 @@
   font-size: 24px;
 }
 
-@keyframes slide {
+/* Close Class */
+
+.footerClose {
+  opacity: 0;
+  animation: fadeout 500ms;
+}
+
+.containerLinkClose {
+  opacity: 0;
+  animation: fadeout 1000ms;
+}
+
+.closing {
+  opacity: 0;
+  animation: fadeout 1500ms;
+}
+
+.menuClose {
+  width: 0;
+  animation: slideout 2s cubic-bezier(0.65, 0, 0.18, 1.02);
+}
+
+@keyframes slidein {
   0% {
     width: 0;
   }
 }
 
-@keyframes opacity {
+@keyframes slideout {
   0% {
-    opacity: 0;
+    width: 100%;
   }
 
   50% {
-    opacity: 0;
+    width: 100%;
   }
 }
 
@@ -129,6 +161,15 @@
   }
   50% {
     opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
   }
 }
 

@@ -3,13 +3,14 @@ import Navbar from './navbar'
 
 
 interface ILayout {
-  children: ReactNode
+  children: ReactNode,
+  dark?: boolean
 }
 
-const layout = ({ children }: ILayout) => {
+const layout = ({ children, dark }: ILayout) => {
   return (
     <>
-      <Navbar />
+      <Navbar dark={dark} />
       <div>{children}</div>
     </>
   )
