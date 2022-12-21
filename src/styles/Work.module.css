@@ -1,7 +1,6 @@
 .container {
   background-color: var(--dark);
   color: white;
-  padding-left: 16px;
   min-height: 100vh;
   min-height: calc(var(--vh) * 100);
 }
@@ -21,6 +20,7 @@
   padding-bottom: 60px;
   opacity: 1;
   animation: fadeIn 2s;
+  padding-left: 16px;
 }
 
 @keyframes fadeIn {
