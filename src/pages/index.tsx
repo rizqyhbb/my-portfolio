@@ -16,7 +16,7 @@ const Home: NextPageWithLayout = () => {
 
       <div className={styles.heroContainer}>
         <div className={styles.titleContainer}>
-          <Title title='Rizqy Fadhilah' subtitle='FRONTEND WEB DEVELOPER' />
+          <Title title={<span>Rizqy<br />Fadhilah</span>} subtitle='FRONTEND WEB DEVELOPER' />
         </div>
         <div className={styles.image}>
           <Image alt='character' src="/char.png" width={240} height={350} quality={100} />

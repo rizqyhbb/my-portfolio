@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styles from "./Title.module.css"
 
 interface ITitle {
-  title: string
+  title: ReactNode
   subtitle?: string
   dark?: boolean
 }
 const Title = ({ title, subtitle, dark }: ITitle) => {
   return (
-    <div className={`${styles.bannerContainer} ${dark && styles.dark}`}>
+    <div className={`${styles.bannerContainer} ${dark && styles.bannerContainerDark}`}>
       <div className={styles.blocker}></div>
       <h1 className={styles.title}>{title}</h1>
       <br />

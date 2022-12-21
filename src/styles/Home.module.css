@@ -9,7 +9,7 @@
 }
 
 .titleContainer {
-  margin-top: var(--navHeight);
+  padding-top: var(--navHeight);
 }
 
 .heroContainer {

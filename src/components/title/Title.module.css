@@ -1,5 +1,5 @@
 .bannerContainer {
-  max-width: min-content;
+  width: max-content;
   position: relative;
   padding-left: 16px;
   margin-bottom: auto;
@@ -28,6 +28,7 @@
   display: inline;
   animation: opacity 1.5s;
   color: inherit;
+  word-wrap: break-word;
 }
 
 .subTitle {

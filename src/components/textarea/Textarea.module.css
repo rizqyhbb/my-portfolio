@@ -1,0 +1,27 @@
+.container {
+  color: white;
+  margin-bottom: 32px;
+}
+
+.container > label {
+  font-weight: bold;
+  color: inherit;
+}
+
+.container > textarea {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  margin-top: 16px;
+  min-width: 100%;
+  color: inherit;
+  font-size: 14px;
+  padding: 0;
+  padding-bottom: 4px;
+}
+.container > textarea:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 1);
+}
