@@ -1,17 +1,21 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@emailjs/browser': ^3.10.0
   '@types/node': 18.11.15
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.9
+  csstype: ^3.0.10
   eslint: 8.29.0
   eslint-config-next: 13.0.6
   next: 13.0.6
   react: 18.2.0
   react-dom: 18.2.0
+  react-hot-toast: ^2.4.0
   typescript: 4.9.4
 
 dependencies:
+  '@emailjs/browser': 3.10.0
   '@types/node': 18.11.15
   '@types/react': 18.0.26
   '@types/react-dom': 18.0.9
@@ -20,7 +24,11 @@ dependencies:
   next: 13.0.6_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-hot-toast: 2.4.0_owo25xnefcwdq3zjgtohz6dbju
   typescript: 4.9.4
+
+devDependencies:
+  csstype: 3.1.1
 
 packages:
 
@@ -37,6 +45,11 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
+    dev: false
+
+  /@emailjs/browser/3.10.0:
+    resolution: {integrity: sha512-pregUOBkSjjctQoAgn8DcSaeY4ypHjXAJEzWlJysM3RkQXw1ulavfHva3YYeAkxfJ7qbIhpyvRmhyQlgNG4GVg==}
+    engines: {node: '>=14.0.0'}
     dev: false
 
   /@eslint/eslintrc/1.3.3:
@@ -521,7 +534,6 @@ packages:
 
   /csstype/3.1.1:
     resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
-    dev: false
 
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
@@ -1120,6 +1132,14 @@ packages:
     resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
     dev: false
 
+  /goober/2.1.11_csstype@3.1.1:
+    resolution: {integrity: sha512-5SS2lmxbhqH0u9ABEWq7WPU69a4i2pYcHeCxqaNq6Cw3mnrF0ghWNM4tEGid4dKy8XNIAUbuThuozDHHKJVh3A==}
+    peerDependencies:
+      csstype: ^3.0.10
+    dependencies:
+      csstype: 3.1.1
+    dev: false
+
   /gopd/1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
     dependencies:
@@ -1671,6 +1691,20 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-hot-toast/2.4.0_owo25xnefcwdq3zjgtohz6dbju:
+    resolution: {integrity: sha512-qnnVbXropKuwUpriVVosgo8QrB+IaPJCpL8oBI6Ov84uvHZ5QQcTp2qg6ku2wNfgJl6rlQXJIQU5q+5lmPOutA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      goober: 2.1.11_csstype@3.1.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    transitivePeerDependencies:
+      - csstype
     dev: false
 
   /react-is/16.13.1:

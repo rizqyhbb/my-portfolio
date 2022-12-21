@@ -3,6 +3,8 @@ import { ReactElement, ReactNode, useEffect } from 'react'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 
+import { Toaster } from 'react-hot-toast'
+
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode
 }
@@ -18,5 +20,5 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
     document.documentElement.style.setProperty('--vh', `${vh}px`)
   }, [])
   const getLayout = Component.getLayout ?? ((page) => page)
-  return getLayout(<Component {...pageProps} />)
+  return getLayout(<><Component {...pageProps} /> <Toaster /></>)
 }
