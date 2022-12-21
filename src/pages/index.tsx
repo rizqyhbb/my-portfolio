@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { ReactElement } from 'react'
-import { Github, Layout } from '../components'
+import { Layout, Title } from '../components'
 import styles from '../styles/Home.module.css'
 import { NextPageWithLayout } from './_app'
 
@@ -15,11 +15,8 @@ const Home: NextPageWithLayout = () => {
       </Head>
 
       <div className={styles.heroContainer}>
-        <div className={styles.bannerContainer}>
-          <div className={styles.blocker}></div>
-          <h1 className={styles.title}>Rizqy Fadhilah</h1>
-          <br />
-          <p className={styles.subTitle}>FRONTEND WEB DEVELOPER</p>
+        <div className={styles.titleContainer}>
+          <Title title='Rizqy Fadhilah' subtitle='FRONTEND WEB DEVELOPER' />
         </div>
         <div className={styles.image}>
           <Image alt='character' src="/char.png" width={240} height={350} quality={100} />
@@ -31,7 +28,7 @@ const Home: NextPageWithLayout = () => {
 
 Home.getLayout = function getLayout(page: ReactElement) {
   return (
-    <Layout github={true}>
+    <Layout github={true} footer={false}>
       {page}
     </Layout>
   )

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Icon from "../Icon";
 import styles from "./Navbar.module.css";
 
@@ -10,6 +10,16 @@ interface INavbar {
 const Navbar = ({ dark = false }: INavbar) => {
   const [openMenu, setOpenMenu] = useState<boolean>(false)
   const [isClosing, setIsClosing] = useState<boolean>(false)
+
+
+  useEffect(() => {
+    const body = document.getElementsByTagName('body')[0]
+    if (openMenu) {
+      body.style.overflow = "hidden"
+    } else {
+      body.style.overflow = "auto"
+    }
+  }, [openMenu])
 
   const handleOpenMenu = () => {
     setIsClosing(false)

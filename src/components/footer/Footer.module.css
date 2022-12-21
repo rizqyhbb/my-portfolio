@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 543px;
+  color: var(--dark);
+}
+
+.titleContainer {
+  width: 256px;
+}
+
+.titleContainer > p:first-child {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80%;
+}
+
+.circle {
+  height: 240px;
+  width: 240px;
+  background-color: var(--dark);
+  color: white;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 46px;
+}
+
+.circle > p {
+  font-size: 24px;
+  font-weight: bold;
+  color: inherit;
+}

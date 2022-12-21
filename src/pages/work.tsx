@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-import { Layout, ProjectLink } from '../components'
+import { Layout, ProjectLink, Title } from '../components'
 import { NextPageWithLayout } from './_app'
 
 import styles from "../styles/Work.module.css"
@@ -16,7 +16,7 @@ const Work: NextPageWithLayout = () => {
 
       <div className={styles.workContainer}>
         <div>
-          <h1 className={styles.title}>Work.</h1>
+          <Title title='Work.' dark={true} />
         </div>
         <div className={styles.linkContainer}>
           <ProjectLink title='WORK 1' description='STACK 1, STACK 2, STACK 3, STACK 4' href='#' />
