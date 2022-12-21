@@ -42,27 +42,19 @@ const Navbar = ({ dark = false }: INavbar) => {
           </div>
           <div className={`${styles.containerLink} ${isClosing && styles.containerLinkClose}`}>
             <div className={styles.linkWrapper}>
-              <button className={styles.button} onClick={handleCloseMenu}>
-                <Link className={styles.link} href="/">home</Link>
-              </button>
+              <Link className={styles.link} href="/" onClick={handleCloseMenu}>home</Link>
               <div className={styles.blocker} />
             </div>
             <div className={styles.linkWrapper}>
-              <button className={styles.button} onClick={handleCloseMenu}>
-                <Link className={styles.link} href="/work">work</Link>
-              </button>
+              <Link className={styles.link} href="/work" onClick={handleCloseMenu}>work</Link>
               <div className={styles.blocker} />
             </div>
             <div className={styles.linkWrapper}>
-              <button className={styles.button} onClick={handleCloseMenu}>
-                <Link className={styles.link} href="/about">about</Link>
-              </button>
+              <Link className={styles.link} href="/about" onClick={handleCloseMenu}>about</Link>
               <div className={styles.blocker} />
             </div>
             <div className={styles.linkWrapper}>
-              <button className={styles.button} onClick={handleCloseMenu}>
-                <Link className={styles.link} href="/contact">contact</Link>
-              </button>
+              <Link className={styles.link} href="/contact" onClick={handleCloseMenu}>contact</Link>
               <div className={styles.blocker} />
             </div>
           </div>

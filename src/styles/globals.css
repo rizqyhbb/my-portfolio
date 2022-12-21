@@ -5,6 +5,7 @@
   --dark: #2b2b2b;
   --black: #1b1c1e;
   --vh: 100vh;
+  --navHeight: 153px;
 }
 
 html,
@@ -21,6 +22,11 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: bold;
 }
 
 * {

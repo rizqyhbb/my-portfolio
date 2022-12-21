@@ -1,0 +1,22 @@
+.container {
+  max-width: 320px;
+}
+
+.linkContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linkContent p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.descriptionContainer p {
+  font-weight: lighter;
+}
+
+.icon {
+  transform: rotate(315deg);
+}

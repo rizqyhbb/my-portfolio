@@ -1,0 +1,20 @@
+.container {
+  background-color: var(--dark);
+  color: white;
+  padding-left: 16px;
+}
+
+.title {
+  color: inherit;
+}
+
+.workContainer {
+  padding-top: var(--navHeight);
+}
+
+.linkContainer {
+  display: grid;
+  row-gap: 16px;
+  margin-top: 120px;
+  padding-bottom: 60px;
+}

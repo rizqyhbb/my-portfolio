@@ -18,14 +18,12 @@
   max-width: min-content;
   position: relative;
   padding-left: 16px;
-  margin-top: 153px;
+  margin-top: var(--navHeight);
   margin-bottom: auto;
   padding-top: 16px;
 }
 
 .title {
-  font-size: 72px;
-  font-weight: bold;
   display: inline;
   animation: opacity 1.5s;
 }
@@ -43,13 +41,6 @@
   align-items: flex-end;
   animation: opacity 2s;
   margin-top: 40px;
-}
-
-.github {
-  position: fixed;
-  right: 0;
-  top: calc(50% - 107px);
-  animation: slideIn 2s cubic-bezier(0.65, 0, 0.18, 1.02);
 }
 
 .blocker {
