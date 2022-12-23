@@ -45,7 +45,7 @@ const Contact: NextPageWithLayout = () => {
         <Title title="Let's talk." dark={true} />
       </div>
       <div className={styles.formContainer}>
-        <form ref={formRef} onSubmit={() => handleSubmit}>
+        <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
           <Input id="name" label='NAME' name='name' />
           <Input id="email" label='EMAIL' name='email' type="email" />
           <Textarea id='message' label='MESSAGE' name='message' />
