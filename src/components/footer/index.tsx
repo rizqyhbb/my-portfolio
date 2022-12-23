@@ -1,13 +1,13 @@
-import Link from 'next/link'
-import React from 'react'
-import styles from "./Footer.module.css"
+import Link from 'next/link';
+import React from 'react';
+import styles from './Footer.module.css';
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
         <p>
-          Let{`'`}s create something awesome together
+          Let{'\''}s create something awesome together
         </p>
         <Link href="/contact" className={styles.link}>
           <div className={styles.circle}>
@@ -16,7 +16,7 @@ const Footer = () => {
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

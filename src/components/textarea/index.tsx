@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from './Textarea.module.css'
+import React from 'react';
+import styles from './Textarea.module.css';
 
 interface ITextarea {
   name: string
@@ -7,13 +7,15 @@ interface ITextarea {
   label: string
 }
 
-const Textarea = ({ id, label, name }: ITextarea) => {
+const Textarea = ({
+  id, label, name
+}: ITextarea): JSX.Element => {
   return (
     <div className={styles.container}>
       <label id={id}>{label}</label>
       <textarea id={id} name={name} rows={2} />
     </div>
-  )
-}
+  );
+};
 
-export default Textarea
+export default Textarea;

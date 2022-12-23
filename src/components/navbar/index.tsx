@@ -1,34 +1,33 @@
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import Icon from "../Icon";
-import styles from "./Navbar.module.css";
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import Icon from '../Icon';
+import styles from './Navbar.module.css';
 
 interface INavbar {
   dark?: boolean
 }
 
-const Navbar = ({ dark = false }: INavbar) => {
-  const [openMenu, setOpenMenu] = useState<boolean>(false)
-  const [isClosing, setIsClosing] = useState<boolean>(false)
-
+const Navbar = ({ dark = false }: INavbar): JSX.Element => {
+  const [openMenu, setOpenMenu] = useState<boolean>(false);
+  const [isClosing, setIsClosing] = useState<boolean>(false);
 
   useEffect(() => {
-    const body = document.getElementsByTagName('body')[0]
+    const body = document.getElementsByTagName('body')[0];
     if (openMenu) {
-      body.style.overflow = "hidden"
+      body.style.overflow = 'hidden';
     } else {
-      body.style.overflow = "auto"
+      body.style.overflow = 'auto';
     }
-  }, [openMenu])
+  }, [openMenu]);
 
-  const handleOpenMenu = () => {
-    setIsClosing(false)
-    setOpenMenu(true)
-  }
-  const handleCloseMenu = () => {
-    setIsClosing(true)
-    setTimeout(() => setOpenMenu(false), 2000)
-  }
+  const handleOpenMenu = (): void => {
+    setIsClosing(false);
+    setOpenMenu(true);
+  };
+  const handleCloseMenu = (): void => {
+    setIsClosing(true);
+    setTimeout(() => setOpenMenu(false), 2000);
+  };
   return (
     <>
       <div className={`${styles.container} ${dark && styles.containerDark}`}>
@@ -37,7 +36,7 @@ const Navbar = ({ dark = false }: INavbar) => {
             PORTFOLIO 2022
           </div>
           <button className={styles.button} onClick={handleOpenMenu}>
-            <Icon.Menu size="48" fill={dark ? "white" : "black"} />
+            <Icon.Menu size="48" fill={dark ? 'white' : 'black'} />
           </button>
         </div>
         <div className={styles.border} />
@@ -78,7 +77,7 @@ const Navbar = ({ dark = false }: INavbar) => {
         </div>
       }
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

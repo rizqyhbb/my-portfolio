@@ -1,10 +1,9 @@
-import React, { ReactNode } from 'react'
-import Footer from '../footer'
-import Github from '../github'
-import Navbar from '../navbar'
+import React, { ReactNode } from 'react';
+import Footer from '../footer';
+import Github from '../github';
+import Navbar from '../navbar';
 
-import styles from './Layout.module.css'
-
+import styles from './Layout.module.css';
 
 interface ILayout {
   children: ReactNode
@@ -13,7 +12,9 @@ interface ILayout {
   github?: boolean
 }
 
-const Layout = ({ children, dark, github = false, footer = true }: ILayout) => {
+const Layout = ({
+  children, dark, github = false, footer = true
+}: ILayout): JSX.Element => {
   return (
     <>
       <Navbar dark={dark} />
@@ -27,7 +28,7 @@ const Layout = ({ children, dark, github = false, footer = true }: ILayout) => {
         <Footer />
       }
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

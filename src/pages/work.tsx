@@ -1,9 +1,11 @@
-import React, { ReactElement } from 'react'
-import { Layout, ProjectLink, Title } from '../components'
-import { NextPageWithLayout } from './_app'
+import React, { ReactElement } from 'react';
+import {
+  Layout, ProjectLink, Title
+} from '../components';
+import { NextPageWithLayout } from './_app';
 
-import styles from "../styles/Work.module.css"
-import Head from 'next/head'
+import styles from '../styles/Work.module.css';
+import Head from 'next/head';
 
 const Work: NextPageWithLayout = () => {
   return (
@@ -27,10 +29,10 @@ const Work: NextPageWithLayout = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-Work.getLayout = function getLayout(page: ReactElement) {
-  return <Layout dark={true} github={true}>{page}</Layout>
-}
-export default Work
+Work.getLayout = function getLayout (page: ReactElement) {
+  return <Layout dark={true} github={true}>{page}</Layout>;
+};
+export default Work;

@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { ReactElement } from 'react'
-import { Layout, Title } from '../components'
-import styles from '../styles/Home.module.css'
-import { NextPageWithLayout } from './_app'
+import Head from 'next/head';
+import Image from 'next/image';
+import { ReactElement } from 'react';
+import { Layout, Title } from '../components';
+import styles from '../styles/Home.module.css';
+import { NextPageWithLayout } from './_app';
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -23,16 +23,15 @@ const Home: NextPageWithLayout = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-Home.getLayout = function getLayout(page: ReactElement) {
+Home.getLayout = function getLayout (page: ReactElement) {
   return (
     <Layout github={true} footer={false}>
       {page}
     </Layout>
-  )
-}
-
+  );
+};
 
 export default Home;

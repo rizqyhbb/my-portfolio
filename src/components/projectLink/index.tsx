@@ -1,15 +1,17 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from 'next/link';
+import React from 'react';
 import Icon from '../Icon';
-import styles from "./ProjectLink.module.css";
+import styles from './ProjectLink.module.css';
 
 interface IProjectLink {
-  href: string,
-  title: string,
+  href: string
+  title: string
   description: string
 }
 
-const ProjectLink = ({ description, href, title }: IProjectLink) => {
+const ProjectLink = ({
+  description, href, title
+}: IProjectLink): JSX.Element => {
   return (
     <div className={styles.container}>
       <Link href={href} >
@@ -22,7 +24,7 @@ const ProjectLink = ({ description, href, title }: IProjectLink) => {
         </div>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectLink
+export default ProjectLink;
