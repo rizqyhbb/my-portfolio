@@ -1,4 +1,4 @@
-import React, { HTMLInputTypeAttribute } from 'react';
+import React, { HTMLInputTypeAttribute, SyntheticEvent } from 'react';
 import styles from './Input.module.css';
 
 interface IInput {
@@ -6,15 +6,17 @@ interface IInput {
   name: string
   label: string
   id: string
+  onChange?: (e: SyntheticEvent) => void
+  value?: string
 
 }
 const Input = ({
-  label, type = 'text', name, id
+  label, type = 'text', name, id, onChange, value
 }: IInput): JSX.Element => {
   return (
     <div className={styles.container}>
       <label id={id}>{label}</label>
-      <input id={id} type={type} name={name} />
+      <input id={id} onChange={onChange} type={type} name={name} value={value}/>
     </div>
   );
 };

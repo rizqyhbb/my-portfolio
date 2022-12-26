@@ -23,6 +23,7 @@
         "quotes": ["error", "single"],
         "@typescript-eslint/semi": "off",
         "@typescript-eslint/restrict-template-expressions": 0,
+        "@typescript-eslint/strict-boolean-expressions": 0,
         "object-curly-newline": [
             "error", {
                 "ObjectPattern": {"multiline": true, "minProperties": 3},

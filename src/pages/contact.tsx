@@ -13,8 +13,11 @@ import toast from 'react-hot-toast';
 const Contact: NextPageWithLayout = () => {
   const formRef = useRef<any>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
 
-  const handleSubmit = async (e: SyntheticEvent): Promise<void> => {
+  const handleSubmit = (e: SyntheticEvent): void => {
     e.preventDefault();
     setIsLoading(true);
     const sendMail = emailjs.sendForm(
@@ -23,12 +26,14 @@ const Contact: NextPageWithLayout = () => {
       formRef.current,
       '14XICNThX7H2xBvZ5'
     );
-    await toast.promise(
+    void toast.promise(
       sendMail,
       {
         loading: 'Sending',
         success: () => {
-          (e.target as HTMLFormElement).reset();
+          setName('');
+          setEmail('');
+          setMessage('');
           setIsLoading(false);
           return <b>Sent!</b>;
         },
@@ -45,12 +50,12 @@ const Contact: NextPageWithLayout = () => {
         <Title title="Let's talk." dark={true} />
       </div>
       <div className={styles.formContainer}>
-        <form ref={formRef} onSubmit={(e) => handleSubmit(e)}>
-          <Input id="name" label='NAME' name='name' />
-          <Input id="email" label='EMAIL' name='email' type="email" />
-          <Textarea id='message' label='MESSAGE' name='message' />
+        <form ref={formRef} onSubmit={handleSubmit}>
+          <Input id="name" label='NAME' name='name' onChange={(e) => setName((e.target as HTMLInputElement).value)} value={name}/>
+          <Input id="email" label='EMAIL' name='email' type="email" onChange={(e) => setEmail((e.target as HTMLInputElement).value)} value={email} />
+          <Textarea id='message' label='MESSAGE' name='message' onChange={(e) => setMessage((e.target as HTMLInputElement).value)} value={message}/>
           <div className={styles.submit}>
-            <Button disabled={isLoading} type='submit'>{isLoading ? 'Sending' : 'Submit'}</Button>
+            <Button disabled={!name || !email || !message || isLoading} type='submit'>Submit</Button>
           </div>
         </form>
       </div>
