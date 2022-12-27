@@ -19,11 +19,11 @@
     "react-hot-toast": "^2.4.0"
   },
   "devDependencies": {
-    "eslint-config-next": "13.0.6",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": ">=5.0.0 <6.0.0",
     "csstype": "^3.0.10",
     "eslint": "^8.0.1",
+    "eslint-config-next": "13.0.6",
     "eslint-config-standard-with-typescript": "^24.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",

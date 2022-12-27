@@ -1,0 +1,46 @@
+.container {
+  background-color: var(--dark);
+  padding-top: var(--navHeight);
+  text-align: center;
+  color: white;
+}
+
+.scroll {
+  letter-spacing: 0.5em;
+  font-weight: lighter;
+}
+
+.wrapper > section {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.wrapper > section {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  min-height: 50vh;
+  min-height: calc(var(--vh) * 50);
+}
+
+.hidden {
+  opacity: 0;
+  animation: fadeout 1s;
+}
+
+.show {
+  opacity: 1;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+}
