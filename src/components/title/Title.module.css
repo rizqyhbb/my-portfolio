@@ -32,11 +32,51 @@
 }
 
 .subTitle {
-  letter-spacing: 3px;
+  letter-spacing: 0.2em;
   font-weight: lighter;
   display: inline;
   animation: opacity 1.5s;
   color: inherit;
+}
+
+.bannerContainer >  {
+  display: none;
+}
+
+.article {
+  display: none;
+  font-size: 24px;
+  margin-left: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: minmax(min-content, min-content);
+    height: 100vh;
+    height: calc(var(--vh) * 100 - var(--navHeight));
+  }
+  
+  .title {
+    font-size: 128px;
+  }
+
+  .subTitle {
+    font-size: 24px;
+    letter-spacing: 0.35em;
+  }
+
+  .article {
+    display: grid;
+  }
+
+  .article:nth-child(2) {
+    align-items: center;
+  }
+
+  .article:last-child {
+    align-items: end;
+  }
 }
 
 @keyframes opacity {

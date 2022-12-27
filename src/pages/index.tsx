@@ -18,8 +18,10 @@ const Home: NextPageWithLayout = () => {
         <div className={styles.titleContainer}>
           <Title title={<span>Rizqy<br />Fadhilah</span>} subtitle='FRONTEND WEB DEVELOPER' />
         </div>
-        <div className={styles.image}>
-          <Image alt='character' src="/char.png" width={240} height={350} quality={100} />
+        <div className={styles.imageContainer}>
+          <div className={styles.image}>
+            <Image alt='character' src="/char.png" quality={100} fill/>
+          </div>
         </div>
       </div>
     </div>

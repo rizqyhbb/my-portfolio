@@ -16,14 +16,35 @@
   display: grid;
   height: 100vh;
   height: calc(var(--vh) * 100);
+  max-width: var(--maxWidthDisplay);
+  margin: auto;
+}
+
+.imageContainer{
+  display: grid;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .image {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
   animation: opacity 2s;
-  margin-top: 40px;
+  position: relative;
+  height: 350px;
+  width: 240px;
+  margin-top: 40px; 
+}
+
+
+@media only screen and (min-width: 768px) {
+  .heroContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .image {
+    transform: rotateY(180deg);
+    height: 552px;
+    width: 379px;
+  }
 }
 
 @keyframes opacity {
