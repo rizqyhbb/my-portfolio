@@ -30,54 +30,32 @@ const About: NextPageWithLayout = () => {
         <meta name="description" content="portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <section className={styles.scroll}>
-          <p>SCROLL DOWN</p>
-        </section>
+      <section className={styles.scroll}>
+        <p>SCROLL DOWN</p>
+      </section>
       <div ref={ref} className={styles.wrapper}>
 
         <section className={styles.hidden}>
           <p>
-            I am a career switcher. What?!
-            <br />
-            Yes! I was an Engineer, an aircraft
-            <br />
-            jet engine engineer for almost 4 years.
+            I am a career switcher. What?! Yes! I was an Engineer, an aircraft jet engine engineer for almost 4 years.
           </p>
         </section>
 
         <section className={styles.hidden}>
           <p>
-            I was graduated both associate and
-            <br />
-            bachelor of Mechanical Engineer.
-            <br />
-            However, I started to see people web
-            <br />
-            and app is so beautiful and I started to
-            <br />
-            liking it.
+            I was graduated both associate and bachelor of Mechanical Engineer. However, I started to see people web and app is so beautiful and I started to liking it.
           </p>
         </section>
 
         <section className={styles.hidden}>
           <p>
-            I started to learn since 2019 as a
-            <br />
-            fullstack and became an official
-            <br />
-            frontend web developer on 2020.
+            I started to learn since 2019 as a fullstack and became an official frontend web developer on 2020.
           </p>
         </section>
 
         <section className={styles.hidden}>
           <p>
-            I love to creating things and learning
-            <br />
-            new stuff. Design is like something to
-            <br />
-            represent your feeling and Web is a great
-            <br />
-            technology that bring the design alive!
+            I love to creating things and learning new stuff. Design is like something to represent your feeling and Web is a great technology that bring the design alive!
           </p>
         </section>
 

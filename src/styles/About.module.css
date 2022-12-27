@@ -21,6 +21,7 @@
   align-items: center;
   min-height: 50vh;
   min-height: calc(var(--vh) * 50);
+  padding: 24px;
 }
 
 .hidden {
