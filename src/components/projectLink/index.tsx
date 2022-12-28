@@ -7,10 +7,11 @@ interface IProjectLink {
   href: string
   title: string
   description: string
+  about: string
 }
 
 const ProjectLink = ({
-  description, href, title
+  description, href, title, about
 }: IProjectLink): JSX.Element => {
   return (
     <div className={styles.container}>
@@ -18,6 +19,9 @@ const ProjectLink = ({
         <div className={styles.linkContent}>
           <p>{title}</p>
           <Icon.Arrow className={styles.icon} fill='white' size='38' />
+        </div>
+        <div className={styles.descriptionContainer}>
+          <p>{about}</p>
         </div>
         <div className={styles.descriptionContainer}>
           <p>{description}</p>

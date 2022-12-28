@@ -6,6 +6,7 @@ import { NextPageWithLayout } from './_app';
 
 import styles from '../styles/Work.module.css';
 import Head from 'next/head';
+import { WORKS } from '../utils/const';
 
 const Work: NextPageWithLayout = () => {
   return (
@@ -21,11 +22,12 @@ const Work: NextPageWithLayout = () => {
           <Title title='Work.' dark={true} />
         </div>
         <div className={styles.linkContainer}>
-          <ProjectLink title='WORK 1' description='STACK 1, STACK 2, STACK 3, STACK 4' href='#' />
-          <ProjectLink title='WORK 1' description='STACK 1, STACK 2, STACK 3, STACK 4' href='#' />
-          <ProjectLink title='WORK 1' description='STACK 1, STACK 2, STACK 3, STACK 4' href='#' />
-          <ProjectLink title='WORK 1' description='STACK 1, STACK 2, STACK 3, STACK 4' href='#' />
-          <ProjectLink title='WORK 1' description='STACK 1, STACK 2, STACK 3, STACK 4' href='#' />
+          {WORKS.map((work, idx) =>
+            <ProjectLink
+              key={idx}
+              title={work.title.toUpperCase()}
+              description={work.description.toUpperCase()}
+              about={work.about} href={work.href} />)}
         </div>
       </div>
     </div>

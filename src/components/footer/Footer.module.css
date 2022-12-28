@@ -1,12 +1,16 @@
 .container {
+  height: 543px;
+  color: var(--dark);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 543px;
-  color: var(--dark);
 }
 
 .titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 256px;
 }
 
@@ -33,4 +37,25 @@
   font-size: 24px;
   font-weight: bold;
   color: inherit;
+}
+
+@media only screen and (min-width: 768px) {
+  .titleContainer {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .titleContainer > p:first-child {
+    font-size: 98px;
+    text-align: left;
+  }
+
+  .circle {
+    height: 300px;
+    width: 300px;
+  }
+
+  .circle > p{
+    font-size: 24px;
+  }
 }

@@ -11,6 +11,8 @@
 
 .workContainer {
   padding-top: var(--navHeight);
+  max-width: var(--maxWidthDisplay);
+  margin: auto;
 }
 
 .linkContainer {
