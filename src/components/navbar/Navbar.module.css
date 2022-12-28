@@ -137,6 +137,36 @@
   animation: slideout 2s cubic-bezier(0.65, 0, 0.18, 1.02);
 }
 
+.desktopMenu {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 1280px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .button {
+    display: none;
+  }
+
+  .desktopMenu {
+    display: flex;
+    gap: 70px;
+    font-weight: bold;
+  }
+
+  .desktopMenu > a {
+    transition: all 0.5s;
+  }
+  .desktopMenu:hover > :not(a:hover){
+    filter: blur(5px);
+  }
+
+}
+
 @keyframes slidein {
   0% {
     width: 0;

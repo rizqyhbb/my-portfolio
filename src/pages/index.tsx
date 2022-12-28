@@ -17,10 +17,16 @@ const Home: NextPageWithLayout = () => {
       <div className={styles.heroContainer}>
         <div className={styles.titleContainer}>
           <Title title={<span>Rizqy<br />Fadhilah</span>} subtitle='FRONTEND WEB DEVELOPER' />
+          <p className={styles.article}>Currently looking for opportunities as a frontend developer (remote)</p>
+          <p className={styles.article}>
+            MALANG, INDONESIA
+            <br />
+            rizqyhbb@gmail.com
+          </p>
         </div>
         <div className={styles.imageContainer}>
           <div className={styles.image}>
-            <Image alt='character' src="/char.png" quality={100} fill/>
+            <Image alt='character' src="/char.png" quality={100} fill />
           </div>
         </div>
       </div>

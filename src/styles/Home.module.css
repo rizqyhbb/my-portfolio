@@ -34,8 +34,32 @@
   margin-top: 40px; 
 }
 
+.article {
+  display: none;
+  animation: opacity 2s;
+  margin-left: 16px;
+}
+
+.article:last-child {
+  align-items: flex-end;
+  padding-bottom: 16px;
+}
+
+.article:nth-last-child(2) {
+  grid-template-columns: 50%;
+  align-items: center;
+}
 
 @media only screen and (min-width: 768px) {
+  .article {
+    display: grid;
+  }
+
+
+  .titleContainer {
+    display: grid;
+  }
+
   .heroContainer {
     grid-template-columns: 1fr 1fr;
   }
@@ -60,11 +84,3 @@
     opacity: 1;
   }
 }
-
-/* .link {
-  transition: all 500ms;
-} */
-
-/* .container:hover > :not(:hover) {
-  filter: blur(5px);
-} */

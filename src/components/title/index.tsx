@@ -21,12 +21,6 @@ const Title = ({
           <p className={styles.subTitle}>{subtitle}</p>
         }
       </div>
-      <p className={styles.article}>Currently looking for opportunities as a frontend developer (remote)</p>
-      <p className={styles.article}>
-        MALANG, INDONESIA
-        <br/>
-        rizqyhbb@gmail.com
-      </p>
     </div>
   );
 };

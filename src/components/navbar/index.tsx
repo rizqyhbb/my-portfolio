@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { LINKS } from '../../utils/const';
 import Icon from '../Icon';
 import styles from './Navbar.module.css';
 
@@ -38,6 +39,12 @@ const Navbar = ({ dark = false }: INavbar): JSX.Element => {
           <button className={styles.button} onClick={handleOpenMenu}>
             <Icon.Menu size="48" fill={dark ? 'white' : 'black'} />
           </button>
+          {/* LINK FOR DESKTOP */}
+          <div className={styles.desktopMenu}>
+            {LINKS.map((link, idx) =>
+                <Link key={idx} href={link.href} onClick={handleCloseMenu}>{link.title}</Link>)}
+          </div>
+          {/* END OF LINK FOR DESKTOP */}
         </div>
         <div className={styles.border} />
       </div>
@@ -50,22 +57,13 @@ const Navbar = ({ dark = false }: INavbar): JSX.Element => {
             </button>
           </div>
           <div className={`${styles.containerLink} ${isClosing && styles.containerLinkClose}`}>
-            <div className={styles.linkWrapper}>
-              <Link className={styles.link} href="/" onClick={handleCloseMenu}>home</Link>
-              <div className={styles.blocker} />
-            </div>
-            <div className={styles.linkWrapper}>
-              <Link className={styles.link} href="/work" onClick={handleCloseMenu}>work</Link>
-              <div className={styles.blocker} />
-            </div>
-            <div className={styles.linkWrapper}>
-              <Link className={styles.link} href="/about" onClick={handleCloseMenu}>about</Link>
-              <div className={styles.blocker} />
-            </div>
-            <div className={styles.linkWrapper}>
-              <Link className={styles.link} href="/contact" onClick={handleCloseMenu}>contact</Link>
-              <div className={styles.blocker} />
-            </div>
+            {/* LINK FOR MOBILE */}
+            {LINKS.map((link, idx) =>
+              <div key={idx} className={styles.linkWrapper}>
+                <Link className={styles.link} href={link.href} onClick={handleCloseMenu}>{link.title}</Link>
+                <div className={styles.blocker} />
+              </div>)}
+            {/* END OF LINK FOR MOBILE */}
           </div>
           <div className={`${styles.footer} ${isClosing && styles.footerClose}`}>
             <p>rizqyhbb@gmail.com</p>
