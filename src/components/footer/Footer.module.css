@@ -55,7 +55,12 @@
     width: 300px;
   }
 
-  .circle > p{
-    font-size: 24px;
+  .circle  p{
+    font-size: 32px;
+    transition: all 0.5s;
+  }
+  
+  .circle:hover p{
+    scale: 1.2;
   }
 }
