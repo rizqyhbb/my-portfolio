@@ -15,7 +15,7 @@ const Textarea = ({
   return (
     <div className={styles.container}>
       <label id={id}>{label}</label>
-      <textarea id={id} name={name} rows={2} value={value} onChange={onChange}/>
+      <textarea id={id} name={name} rows={5} value={value} onChange={onChange}/>
     </div>
   );
 };

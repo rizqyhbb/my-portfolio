@@ -16,3 +16,13 @@
   text-align: center;
   padding: 64px 0;
 }
+
+@media only screen and (min-width: 768px) {
+  .formContainer {
+    max-width: 50%;
+  }
+
+  .submit {
+    text-align: left;
+  }
+}
