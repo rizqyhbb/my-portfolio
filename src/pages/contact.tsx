@@ -9,6 +9,7 @@ import emailjs from '@emailjs/browser';
 
 import styles from '../styles/Contact.module.css';
 import toast from 'react-hot-toast';
+import Head from 'next/head';
 
 const Contact: NextPageWithLayout = () => {
   const formRef = useRef<any>(null);
@@ -46,6 +47,11 @@ const Contact: NextPageWithLayout = () => {
   };
   return (
     <div className={styles.container}>
+      <Head>
+        <title>rizqyhbb | CONTACT</title>
+        <meta name="description" content="portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className={styles.contactContainer}>
         <div className={styles.title}>
           <Title title="Let's talk." dark={true} />
