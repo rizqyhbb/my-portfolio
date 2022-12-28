@@ -3,6 +3,11 @@
   background-color: var(--dark);
 }
 
+.contactContainer {
+  max-width: var(--maxWidthDisplay);
+  margin: auto;
+}
+
 .title {
   padding-top: var(--navHeight);
 }
@@ -10,6 +15,7 @@
 .formContainer {
   margin: 0 16px;
   margin-top: 120px;
+  animation: fadein 2s;
 }
 
 .submit {
@@ -24,5 +30,19 @@
 
   .submit {
     text-align: left;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
   }
 }

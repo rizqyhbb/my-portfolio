@@ -27,7 +27,7 @@
 }
 
 .image {
-  animation: opacity 2s;
+  animation: fadein 2s;
   position: relative;
   height: 350px;
   width: 240px;
@@ -36,7 +36,7 @@
 
 .article {
   display: none;
-  animation: opacity 2s;
+  animation: fadein 2s;
   margin-left: 16px;
 }
 
@@ -71,7 +71,7 @@
   }
 }
 
-@keyframes opacity {
+@keyframes fadein {
   0% {
     opacity: 0;
   }

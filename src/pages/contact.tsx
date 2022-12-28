@@ -46,18 +46,20 @@ const Contact: NextPageWithLayout = () => {
   };
   return (
     <div className={styles.container}>
-      <div className={styles.title}>
-        <Title title="Let's talk." dark={true} />
-      </div>
-      <div className={styles.formContainer}>
-        <form ref={formRef} onSubmit={handleSubmit}>
-          <Input id="name" label='NAME' name='name' onChange={(e) => setName((e.target as HTMLInputElement).value)} value={name}/>
-          <Input id="email" label='EMAIL' name='email' type="email" onChange={(e) => setEmail((e.target as HTMLInputElement).value)} value={email} />
-          <Textarea id='message' label='MESSAGE' name='message' onChange={(e) => setMessage((e.target as HTMLInputElement).value)} value={message}/>
-          <div className={styles.submit}>
-            <Button disabled={!name || !email || !message || isLoading} type='submit'>Submit</Button>
-          </div>
-        </form>
+      <div className={styles.contactContainer}>
+        <div className={styles.title}>
+          <Title title="Let's talk." dark={true} />
+        </div>
+        <div className={styles.formContainer}>
+          <form ref={formRef} onSubmit={handleSubmit}>
+            <Input id="name" label='NAME' name='name' onChange={(e) => setName((e.target as HTMLInputElement).value)} value={name}/>
+            <Input id="email" label='EMAIL' name='email' type="email" onChange={(e) => setEmail((e.target as HTMLInputElement).value)} value={email} />
+            <Textarea id='message' label='MESSAGE' name='message' onChange={(e) => setMessage((e.target as HTMLInputElement).value)} value={message}/>
+            <div className={styles.submit}>
+              <Button disabled={!name || !email || !message || isLoading} type='submit'>Submit</Button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
