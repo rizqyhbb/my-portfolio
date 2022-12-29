@@ -49,7 +49,7 @@ const About: NextPageWithLayout = () => {
 
         <section className={styles.hidden}>
           <p>
-            I started to learn since 2019 as a fullstack and became an official frontend web developer on 2020.
+            I started to learn since 2019 as a fullstack and became an official frontend web developer on 2022.
           </p>
         </section>
 

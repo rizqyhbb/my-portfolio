@@ -11,17 +11,14 @@
 }
 
 .wrapper > section {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.wrapper > section {
   display: grid;
   place-items: center;
   align-items: center;
   min-height: 50vh;
   min-height: calc(var(--vh) * 50);
   padding: 24px;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .hidden {
@@ -32,6 +29,16 @@
 .show {
   opacity: 1;
   animation: fadein 1s;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper > section {
+    max-width: 50%;
+    margin: auto;
+    font-size: 42px;
+    min-height: 60vh;
+  min-height: calc(var(--vh) * 60);
+  }
 }
 
 @keyframes fadein {
