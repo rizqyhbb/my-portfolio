@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { LINKS } from '../../utils/const';
+import { LINKS, PROFILE_DETAIL } from '../../utils/const';
 import Icon from '../Icon';
 import styles from './Navbar.module.css';
 
@@ -66,10 +66,10 @@ const Navbar = ({ dark = false }: INavbar): JSX.Element => {
             {/* END OF LINK FOR MOBILE */}
           </div>
           <div className={`${styles.footer} ${isClosing && styles.footerClose}`}>
-            <p>rizqyhbb@gmail.com</p>
-            <p>MALANG, INDONESIA</p>
+            <p>{PROFILE_DETAIL.email}</p>
+            <p>{PROFILE_DETAIL.city.toUpperCase()}, {PROFILE_DETAIL.country.toUpperCase()}</p>
             <p>
-              Currently looking for opportunities as a frontend developer (remote)
+              {PROFILE_DETAIL.description}
             </p>
           </div>
         </div>

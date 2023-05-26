@@ -71,6 +71,9 @@
 .containerLink > .linkWrapper:nth-child(4) > .blocker {
   animation: maskSlideOut 3500ms;
 }
+.containerLink > .linkWrapper:nth-child(5) > .blocker {
+  animation: maskSlideOut 4000ms;
+}
 
 .linkWrapper {
   position: relative;

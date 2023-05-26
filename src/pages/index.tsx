@@ -4,6 +4,7 @@ import { ReactElement } from 'react';
 import { Layout, Title } from '../components';
 import styles from '../styles/Home.module.css';
 import { NextPageWithLayout } from './_app';
+import { PROFILE_DETAIL } from '../utils/const';
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -17,11 +18,11 @@ const Home: NextPageWithLayout = () => {
       <div className={styles.heroContainer}>
         <div className={styles.titleContainer}>
           <Title title={<span>Rizqy<br />Fadhilah</span>} subtitle='FRONTEND WEB DEVELOPER' />
-          <p className={styles.article}>Currently looking for opportunities as a frontend developer (remote)</p>
+          <p className={styles.article}>{PROFILE_DETAIL.description}</p>
           <p className={styles.article}>
-            MALANG, INDONESIA
+            {PROFILE_DETAIL.city.toUpperCase()}, {PROFILE_DETAIL.country.toUpperCase()}
             <br />
-            rizqyhbb@gmail.com
+            {PROFILE_DETAIL.email}
           </p>
         </div>
         <div className={styles.imageContainer}>

@@ -11,11 +11,19 @@ interface IWork {
   href: string
 }
 
+interface IProfileDetail {
+  city: string
+  country: string
+  email: string
+  description: string
+}
+
 export const LINKS: ILink[] = [
   { href: '/', title: 'home' },
   { href: '/work', title: 'work' },
   { href: '/about', title: 'about' },
-  { href: '/contact', title: 'contact' }
+  { href: '/contact', title: 'contact' },
+  { href: 'https://dev.rizqyhbb.vercel.app', title: 'blog' }
 ];
 
 export const WORKS: IWork[] = [
@@ -40,3 +48,10 @@ export const WORKS: IWork[] = [
     description: 'NextJs, ANTD, apapun',
     href: 'http://github.com/rizqyhbb' }
 ];
+
+export const PROFILE_DETAIL: IProfileDetail = {
+  city: 'sleman',
+  country: 'indonesia',
+  email: 'rizqyhbb@gmail.com',
+  description: 'Currently looking for opportunities as a frontend developer (remote)'
+};
