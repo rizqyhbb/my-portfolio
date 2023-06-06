@@ -1,0 +1,12 @@
+.MediaPreviewImage {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  height: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+.MediaPreviewImage {
+  height: 600px;
+}
+}

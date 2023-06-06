@@ -1,9 +1,10 @@
 import React, { ReactNode } from 'react';
 import Footer from '../footer';
-import Github from '../github';
 import Navbar from '../navbar';
 
 import styles from './Layout.module.css';
+import SideLink from '../sideLink';
+import { Icon } from '..';
 
 interface ILayout {
   children: ReactNode
@@ -20,8 +21,13 @@ const Layout = ({
       <Navbar dark={dark} />
       <div>{children}</div>
       {github &&
-        <div className={styles.github}>
-          <Github />
+        <div className={styles.sideLink}>
+          <SideLink href='https://github.com/rizqyhbb'>
+            <Icon.Github />
+          </SideLink>
+          <SideLink href='https://drive.google.com/file/d/1LcPbRz7XclztuGzcMsIQUD1vLtDwa8S5/view?usp=sharing'>
+            <p style={{ color: 'white', fontSize: '14px', fontWeight: '600', textAlign: 'center' }}>CV</p>
+          </SideLink>
         </div>
       }
       {footer &&

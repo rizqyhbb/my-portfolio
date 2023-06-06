@@ -34,7 +34,7 @@ const Navbar = ({ dark = false }: INavbar): JSX.Element => {
       <div className={`${styles.container} ${dark && styles.containerDark}`}>
         <div className={styles.titleContainer}>
           <div className={styles.title}>
-            PORTFOLIO 2022
+            {process.env.NEXT_PUBLIC_TITLE}
           </div>
           <button className={styles.button} onClick={handleOpenMenu}>
             <Icon.Menu size="48" fill={dark ? 'white' : 'black'} />

@@ -1,6 +1,6 @@
 export { default as Button } from './button';
 export { default as Footer } from './footer';
-export { default as Github } from './github';
+export { default as Github } from './sideLink';
 export { default as Icon } from './Icon';
 export { default as Input } from './input';
 export { default as Layout } from './layout';

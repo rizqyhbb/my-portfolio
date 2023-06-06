@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 2s;
 }
 
 .titleContainer {
@@ -62,5 +63,15 @@
   
   .circle:hover p{
     scale: 1.2;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
   }
 }

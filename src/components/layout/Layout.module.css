@@ -1,8 +1,11 @@
-.github {
+.sideLink {
   position: fixed;
   right: 0;
   top: calc(50% - 107px);
   animation: slideIn 2s cubic-bezier(0.65, 0, 0.18, 1.02);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 @keyframes slideIn {

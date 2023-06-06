@@ -23,9 +23,6 @@ const ProjectLink = ({
         <div className={styles.descriptionContainer}>
           <p>{about}</p>
         </div>
-        <div className={styles.descriptionContainer}>
-          <p>{description}</p>
-        </div>
       </Link>
     </div>
   );
