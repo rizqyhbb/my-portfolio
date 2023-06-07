@@ -54,7 +54,7 @@ const Contact: NextPageWithLayout = () => {
       </Head>
       <div className={styles.contactContainer}>
         <div className={styles.title}>
-          <Title title="Let's talk." dark={true} />
+          <Title title="Let's_talk." dark={true} />
         </div>
         <div className={styles.formContainer}>
           <form ref={formRef} onSubmit={handleSubmit}>

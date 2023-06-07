@@ -45,7 +45,7 @@ export const WORKS: IWork[] = [
     media: '/video/collabway.mp4'
   },
   {
-    title: 'wallet app',
+    title: 'wallet',
     about: 'Financial planning app that is Initiative project for mentoring program',
     description: 'The Wallet App is a mentoring project aimed at building a small community for colleagues who have completed their bootcamp training and are preparing to apply for jobs or gain hands-on experience in building industry-like applications. The primary objective of this initiative is to familiarize them with the technology industry. While the app serves as a financial planner, it also offers a wide range of features that can be created and developed, providing an excellent playground for learning and exploration.',
     tech: ['nextJs', 'postgres', 'vercel', 'tailwind', 'express', 'sequelize', 'redux'],
@@ -57,6 +57,20 @@ export const WORKS: IWork[] = [
       'Playground for feature development: The app offers a platform for exploring and developing various features, allowing participants to enhance their skills and creativity.'
     ],
     media: '/image/wallet-app.png'
+  },
+  {
+    title: 'ops dashboard',
+    about: 'Financial planning app that is Initiative project for mentoring program',
+    description: 'The Wallet App is a mentoring project aimed at building a small community for colleagues who have completed their bootcamp training and are preparing to apply for jobs or gain hands-on experience in building industry-like applications. The primary objective of this initiative is to familiarize them with the technology industry. While the app serves as a financial planner, it also offers a wide range of features that can be created and developed, providing an excellent playground for learning and exploration.',
+    tech: ['nextJs', 'postgres', 'vercel', 'tailwind', 'express', 'sequelize', 'redux'],
+    href: 'http://stage-aegis.vercel.app',
+    features: [
+      'Financial planning: The app provides functionality as a financial planner, helping users manage their finances effectively.',
+      'Mentoring and community building: The project fosters a supportive community where colleagues can engage in mentoring and collaborative learning.',
+      'Industry-like app development: Participants gain hands-on experience in building applications similar to those found in the industry.',
+      'Playground for feature development: The app offers a platform for exploring and developing various features, allowing participants to enhance their skills and creativity.'
+    ],
+    media: '/video/ops.mp4'
   }
 ];
 

@@ -1,5 +1,8 @@
+.container {
+  width: min-content;
+}
+
 .bannerContainer {
-  width: max-content;
   position: relative;
   padding-left: 16px;
   margin-bottom: auto;
