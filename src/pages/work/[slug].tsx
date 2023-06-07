@@ -4,7 +4,8 @@ import { IWork, WORKS } from '../../utils/const';
 import { Layout, Title } from '../../components';
 import styles from '../../styles/WorkDetail.module.css';
 import {
-  SiExpress, SiMarkdown, SiNextdotjs, SiOpenai, SiPostgresql, SiRedux, SiRemix, SiSequelize, SiSupabase, SiTailwindcss, SiVercel
+  SiAntdesign,
+  SiExpress, SiMarkdown, SiNextdotjs, SiOpenai, SiPostgresql, SiRedux, SiRemix, SiSequelize, SiStyledcomponents, SiSupabase, SiTailwindcss, SiVercel
 } from 'react-icons/si';
 import { FaFly } from 'react-icons/fa';
 import Head from 'next/head';
@@ -44,7 +45,9 @@ const icons: IconType = {
   sequelize: <SiSequelize size={24} />,
   redux: <SiRedux size={24} />,
   fly: <FaFly size={24} />,
-  markdown: <SiMarkdown size={24} />
+  markdown: <SiMarkdown size={24} />,
+  antd: <SiAntdesign size={24} />,
+  styledComponents: <SiStyledcomponents size={24} />
 };
 
 const Work = ({ work }: { work: IWork }): ReactElement => {

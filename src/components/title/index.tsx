@@ -3,7 +3,7 @@ import styles from './Title.module.css';
 
 interface ITitle {
   title: ReactNode
-  subtitle?: string
+  subtitle?: ReactNode
   dark?: boolean
 }
 const Title = ({

@@ -17,7 +17,7 @@ const Home: NextPageWithLayout = () => {
 
       <div className={styles.heroContainer}>
         <div className={styles.titleContainer}>
-          <Title title={<span>Rizqy<br />Fadhilah</span>} subtitle='FRONTEND WEB DEVELOPER' />
+          <Title title={<span>Rizqy<br />Fadhilah</span>} subtitle="FRONTEND DEVELOPER" />
           <p className={styles.article}>{PROFILE_DETAIL.description}</p>
           <p className={styles.article}>
             {PROFILE_DETAIL.city.toUpperCase()}, {PROFILE_DETAIL.country.toUpperCase()}

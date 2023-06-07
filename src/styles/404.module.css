@@ -1,0 +1,41 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+}
+.container h1 {
+  font-size: 36px;
+}
+
+.container h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.errorContent {
+  padding: 24px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container h1{
+    font-size: 72px;
+  }
+
+  .container h2{
+    font-size: 24px;
+  }
+
+  .errorContent {
+    filter: blur(24px);
+    transition: all 1s;
+  }
+  
+  .errorContent:hover {
+    filter: blur(0px);
+    transition: all 1s;
+  }
+  
+}
