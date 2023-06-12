@@ -25,7 +25,7 @@ const Layout = ({
           <SideLink href='https://github.com/rizqyhbb'>
             <Icon.Github />
           </SideLink>
-          <SideLink href='https://drive.google.com/file/d/1LcPbRz7XclztuGzcMsIQUD1vLtDwa8S5/view?usp=sharing'>
+          <SideLink href='https://drive.google.com/file/d/1c4PaKGODyg5Fu0eJW6MPQLT4uML5W2Hd/view?usp=sharing'>
             <p style={{ color: 'white', fontSize: '14px', fontWeight: '600', textAlign: 'center' }}>CV</p>
           </SideLink>
         </div>
