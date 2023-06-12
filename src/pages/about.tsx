@@ -37,30 +37,30 @@ const About: NextPageWithLayout = () => {
 
         <section className={styles.hidden}>
           <p>
-            I am a career switcher. What?! Yes! I was an Engineer, an aircraft jet engine engineer for almost 4 years.
+            I am a career switcher. What?! Yes! I spent nearly four years as an Engineer, specializing in aircraft jet engines.
           </p>
         </section>
 
         <section className={styles.hidden}>
           <p>
-            I was graduated both associate and bachelor of Mechanical Engineer. However, I started to see people web and app is so beautiful and I started to liking it.
+            I hold degrees in both associate and bachelor of Mechanical Engineering. However, I began to notice the captivating beauty of web and app design also how an application solved so many problems, and my interest grew from there.
           </p>
         </section>
 
         <section className={styles.hidden}>
           <p>
-            I started to learn since 2019 as a fullstack and became an official frontend web developer on 2022.
+            Since 2019, I embarked on a journey to learn full-stack development, and in 2022, I officially transitioned to becoming a frontend web developer.
           </p>
         </section>
 
         <section className={styles.hidden}>
           <p>
-            I love to creating things and learning new stuff. Design is like something to represent your feeling and Web is a great technology that bring the design alive!
+            I have a passion for creating and constantly expanding my knowledge. Design, to me, is a medium for expressing emotions, and the web is an incredible technology that brings designs to life!
           </p>
         </section>
 
         <section className={styles.hidden}>
-          <p>I{'\''}m so grateful for doing what I love!</p>
+          <p>I am incredibly grateful to be doing what I love!</p>
         </section>
       </div>
     </div>
