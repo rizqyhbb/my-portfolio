@@ -3,12 +3,32 @@ interface ILink {
   title: string
 }
 
+export type Tech =
+| 'gatsby'
+| 'nextJs'
+| 'tailwind'
+| 'remix'
+| 'postgres'
+| 'openAi'
+| 'supabase'
+| 'vercel'
+| 'express'
+| 'sequelize'
+| 'redux'
+| 'fly'
+| 'markdown'
+| 'antd'
+| 'styledComponents'
+| 'tanstack'
+| 'sanity'
+| 'graphQl'
+
 export interface IWork {
   title: string
   about: string
   description: string
   href?: string
-  tech?: string[]
+  tech?: Tech[]
   media?: string
   features: string[]
 }
@@ -29,6 +49,32 @@ export const LINKS: ILink[] = [
 ];
 
 export const WORKS: IWork[] = [
+  {
+    title: 'clinic healthcare mngmnt.',
+    about: 'The Clinic Admin App simplifies healthcare management with tools for handling appointments, doctors, patients, and invoicing, tailored for staff and professionals.',
+    description: 'The Clinic Admin App is a comprehensive solution for managing appointments, doctors, patients, and invoicing. It offers user-friendly access for both administrative staff and medical professionals, streamlining operations for healthcare facilities.',
+    tech: ['nextJs', 'tanstack', 'antd', 'tailwind', 'supabase'],
+    href: 'https://staging-carepulse-appointment-app.vercel.app/',
+    features: [
+      'Public/Patient Role: Patients can register using their phone numbers. If the number already exists in the database, the patient is redirected to the appointment scheduling process, where they can select a date and view available doctors. For new patients, the registration process includes entering personal details and agreeing to the terms and policies before proceeding.',
+      'Admin Role: Admins can log in securely using an OTP sent to their email. Once logged in, they access a dashboard featuring five key menus: Summary, Appointments, Invoice, Doctors, and Patients. The "Summary" menu provides insights, including yearly revenue, total revenue, patient counts, and completed appointments. In the "Appointments" menu, admins can manage appointments by filtering statuses like CREATED, CANCELED, CONFIRMED, and others, as well as change dates, assign doctors, and add notes. The "Doctors" menu allows admins to add new doctors using email-based OTPs for login, manage their availability, activate or deactivate their status, and view detailed patient and treatment records. Lastly, the "Patients" menu enables admins to edit patient details, view medical histories, and access records such as prescriptions and doctor notes.',
+      'Doctor Role: Doctors log in using an email-based OTP system. They have access to two menus: "My Appointments" and "Patients." In "My Appointments," doctors can view their scheduled appointments with statuses like CONFIRMED, UNPAID, or IN TREATMENT, filter appointments by date, search for patients, and review appointment details. They can add notes, prescribe medications, record treatments with pricing and discounts, and update the appointment status to IN TREATMENT, notifying admins of their activity. In the "Patients" menu, doctors can view detailed medical records, including treatment history, prescriptions, and notes, but they cannot edit patient information.'
+    ],
+    media: '/image/clinic-app.png'
+  },
+  {
+    title: 'squirrel.ws',
+    about: 'Squirrel (squirrel.ws) is an online store specializing in stock and made-to-order (MTO) wingsuits, jumpsuits, parachutes, and containers with seamless customization and checkout.',
+    description: 'Squirrel (squirrel.ws) is an online store offering a wide range of stock and made-to-order (MTO) products, including wingsuits, jumpsuits, parachutes, and containers. The platform features an engaging landing page, a seamless customization process, and an efficient cart and checkout system.',
+    tech: ['gatsby', 'styledComponents', 'tanstack', 'sanity', 'graphQl'],
+    href: 'http://squirrel.ws',
+    features: [
+      'Optimized Landing Page: Enhanced the landing page to effectively showcase Squirrel\'s product offerings. Implemented a compelling design and informative content to engage and inform potential customers about the available features and recommendations.',
+      'Customization Process: Developed an intuitive order page, allowing users to customize MTO products with a variety of pricing options. Ensured a user-friendly interface for a seamless customization experience.',
+      'Streamlined Cart and Checkout: Optimized the cart and checkout process, making it efficient and user-centric. This enhancement facilitated smooth transactions and reduced cart abandonment rates.'
+    ],
+    media: '/image/squirrel-ws.png'
+  },
   {
     title: 'collabway.',
     about: 'ChatGPT with enhanced features, including workspaces for seamless collaboration. And no need account sharing for premium ChatGPT.',

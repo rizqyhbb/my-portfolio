@@ -1,18 +1,18 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import React, { Fragment, ReactElement } from 'react';
 import { IWork, WORKS } from '../../utils/const';
+import type { Tech } from '../../utils/const';
 import { Layout, Title } from '../../components';
 import styles from '../../styles/WorkDetail.module.css';
 import {
   SiAntdesign,
-  SiExpress, SiMarkdown, SiNextdotjs, SiOpenai, SiPostgresql, SiRedux, SiRemix, SiSequelize, SiStyledcomponents, SiSupabase, SiTailwindcss, SiVercel
+  SiExpress, SiGatsby, SiGraphql, SiMarkdown, SiNextdotjs, SiOpenai, SiPostgresql, SiReactquery, SiRedux, SiRemix, SiSanity, SiSequelize, SiStyledcomponents, SiSupabase, SiTailwindcss, SiVercel
 } from 'react-icons/si';
 import { FaFly } from 'react-icons/fa';
 import Head from 'next/head';
 import MediaPreview from '../../components/work/MediaPreview';
-import Link from 'next/link';
 
-type IconType = Record<string, any>
+export type IconType = Record<Tech, any>
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = WORKS.map(work => ({
@@ -34,20 +34,24 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 const icons: IconType = {
-  nextJs: <SiNextdotjs size={24} />,
-  tailwind: <SiTailwindcss size={24} />,
-  remix: <SiRemix size={24} />,
-  postgres: <SiPostgresql size={24} />,
-  openAi: <SiOpenai size={24} />,
-  supabase: <SiSupabase size={24} />,
-  vercel: <SiVercel size={24} />,
-  express: <SiExpress size={24} />,
-  sequelize: <SiSequelize size={24} />,
-  redux: <SiRedux size={24} />,
-  fly: <FaFly size={24} />,
-  markdown: <SiMarkdown size={24} />,
-  antd: <SiAntdesign size={24} />,
-  styledComponents: <SiStyledcomponents size={24} />
+  nextJs: <SiNextdotjs size={24} title='NextJs'/>,
+  tailwind: <SiTailwindcss size={24} title='Tailwind CSS'/>,
+  remix: <SiRemix size={24} title='Remix'/>,
+  postgres: <SiPostgresql size={24} title='PostgreSQL'/>,
+  openAi: <SiOpenai size={24} title='OpenAI'/>,
+  supabase: <SiSupabase size={24} title="Supabase"/>,
+  vercel: <SiVercel size={24} title="Vercel"/>,
+  express: <SiExpress size={24} title="ExpressJs"/>,
+  sequelize: <SiSequelize size={24} title="Sequelize"/>,
+  redux: <SiRedux size={24} title="Redux"/>,
+  fly: <FaFly size={24} title="Fly.io"/>,
+  markdown: <SiMarkdown size={24} title="Markdown"/>,
+  antd: <SiAntdesign size={24} title="Ant Design"/>,
+  styledComponents: <SiStyledcomponents size={24} title="Styled-Component"/>,
+  gatsby: <SiGatsby size={24} title="Gatsby"/>,
+  tanstack: <SiReactquery size={24} title="Tanstack"/>,
+  graphQl: <SiGraphql size={24} title="GraphQL"/>,
+  sanity: <SiSanity size={24} title="Sanity"/>
 };
 
 const Work = ({ work }: { work: IWork }): ReactElement => {
@@ -71,7 +75,13 @@ const Work = ({ work }: { work: IWork }): ReactElement => {
               {work.tech?.map(tech => <Fragment key={tech}>{icons[tech]}</Fragment>)}
             </div>
             {work.href &&
-              <Link href={work.href} style={{ fontWeight: 'bold', textDecoration: 'underline' }}>Visit website</Link>
+              <a
+              href={work.href}
+              style={{ fontWeight: 'bold', textDecoration: 'underline' }}
+              target='_blank'
+              rel="noreferrer">
+                Visit website
+              </a>
             }
           </div>
           <MediaPreview className={styles.mediaMobileContainer} work={work} />
