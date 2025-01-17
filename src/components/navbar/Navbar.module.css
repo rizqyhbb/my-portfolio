@@ -164,15 +164,19 @@
     display: flex;
     gap: 70px;
     font-weight: bold;
+    padding: 32px 0;
+  }
+
+  .titleContainer {
+    padding: 0px 16px;
   }
 
   .desktopMenu > a {
     transition: all 0.5s;
   }
-  .desktopMenu:hover > :not(a:hover){
+  .desktopMenu:hover > :not(a:hover) {
     filter: blur(5px);
   }
-
 }
 
 @keyframes slidein {
