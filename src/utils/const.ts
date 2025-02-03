@@ -45,7 +45,7 @@ export const LINKS: ILink[] = [
   { href: "/work", title: "work" },
   { href: "/about", title: "about" },
   { href: "/contact", title: "contact" },
-  { href: "https://dev.rizqyhbb.vercel.app", title: "blog" },
+  { href: "https://blog.rizqyhbb.dev", title: "blog" },
 ];
 
 export const WORKS: IWork[] = [
